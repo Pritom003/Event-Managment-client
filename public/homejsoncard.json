@@ -1,0 +1,84 @@
+ [
+    {
+      "id": 1,
+      "type": "Workshop",
+      "name": "Effective Time Management Workshop",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "$49.99",
+      "description": "Learn essential time management skills to boost your productivity.",
+      "button_text": "Register Now"
+    },
+    {
+      "id": 2,
+      "type": "Webinar",
+      "name": "Digital Marketing Strategies Webinar",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "Free",
+      "description": "Discover the latest digital marketing trends and strategies.",
+      "button_text": "Join Webinar"
+    },
+    {
+      "id": 3,
+      "type": "Career Fair",
+      "name": "Tech Industry Career Fair",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "Free Admission",
+      "description": "Connect with top tech companies and explore job opportunities.",
+      "button_text": "View Exhibitors"
+    },
+    {
+      "id": 4,
+      "type": "Educational Conference",
+      "name": "STEM Education Summit",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "$149.99",
+      "description": "Explore innovative approaches to STEM education.",
+      "button_text": "Buy Tickets"
+    },
+    {
+      "id": 5,
+      "type": "Training Program",
+      "name": "Leadership Development Training",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "$199.99",
+      "description": "Enhance your leadership skills and become an effective leader.",
+      "button_text": "Enroll Now"
+    },
+    {
+      "id": 6,
+      "type": "Workshop",
+      "name": "Effective Communication Workshop",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "$59.99",
+      "description": "Improve your communication skills for personal and professional success.",
+      "button_text": "Register Now"
+    },
+    {
+      "id": 7,
+      "type": "Conference",
+      "name": "AI in Healthcare Conference",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "$299.99",
+      "description": "Explore the impact of AI on the healthcare industry.",
+      "button_text": "Get Tickets"
+    },
+    {
+      "id": 8,
+      "type": "Webinar",
+      "name": "Financial Planning Webinar",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "Free",
+      "description": "Learn essential financial planning strategies for a secure future.",
+      "button_text": "Join Webinar"
+    },
+    {
+      "id": 9,
+      "type": "Career Fair",
+      "name": "Green Energy Job Fair",
+      "image": "https://i.ibb.co/qdr5njw/workingppl.png",
+      "price": "Free Admission",
+      "description": "Explore career opportunities in the green energy sector.",
+      "button_text": "Explore Opportunities"
+    }
+  ]
+

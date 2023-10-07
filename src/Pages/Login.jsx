@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../COMPONENTS/Authfiles/AuthProvider';
 
 const Login = () => {
+  const {  Singnin}=useContext(AuthContext)
   const handlelogin=(e)=>{
     e.preventDefault()
     const email=e.target.email.value
     const password=e.target.password.value
     console.log(email,password)
+    Singnin(email,password)
+    .then(result=>{
+      console.log(result.user)
+
+    })
+    .catch(error=>{
+      console.error(error)
+
+    })
   }
   return (
     <div className="hero min-h-screen bg-base-200">

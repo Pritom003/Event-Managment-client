@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Cards = ({card}) => {
-  const {name, type , image,price,description,button_text}=card
+  const {name, type , image,price,description,button_text,id}=card
+
+  
   return (
-    <div>
+    <div data-aos="zoom-in-down">
       
       
 <div className='p-4  h-[500px]'>
@@ -23,7 +25,7 @@ const Cards = ({card}) => {
   
     
 
-<Link to='/details'><button className="btn bg-cyan-900 text-white fontbold"> view details  </button></Link>
+<Link to={`/details/${id}`}><button className="btn bg-cyan-900 text-white fontbold"> view details  </button></Link>
 
    
     </div>

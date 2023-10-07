@@ -5,6 +5,8 @@ import Cards from '../COMPONENTS/Header/Cards';
 import Footers from '../COMPONENTS/Header/Footers';
 
 const Home = () => {
+
+  
   const carddata=useLoaderData();
   console.log( 'hey ',carddata)
   return (

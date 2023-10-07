@@ -1,7 +1,19 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import {  MdCastForEducation } from "react-icons/md";
+import { AuthContext } from '../Authfiles/AuthProvider';
 const Navbar = () => {
+  const {user ,logout}=useContext(AuthContext)
+  const handlesignout=()=>{
+    logout()
+    .then(res=>{
+      console.log('logged out',res)
+
+    })
+    .catch(err=>{
+      console.log('error logged out',err)
+    })
+  }
   const link=<>
   <li> <NavLink to='/'>Home</NavLink></li>
   <li> <NavLink to='/login'>login</NavLink></li>
@@ -30,7 +42,9 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+   {
+    user ? <button onClick={handlesignout}>signout</button>: <Link to='/login'><button>login</button></Link>
+   }
   </div>
 </div>
     </div>

@@ -19,9 +19,8 @@ const Details = () => {
   
 
   return (
-    <div>
-      <p>The details</p>
-      {id}
+    <div className=' max-w-6xl mx-auto p-10 grid justify-center items-center align-middle p-6'>
+      
       <Detailcard selcted={selcted}></Detailcard>
       
     </div>

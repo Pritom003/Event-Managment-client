@@ -1,8 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../COMPONENTS/Authfiles/AuthProvider';
+import { Link } from 'react-router-dom';
+import {FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-  const {  Singnin}=useContext(AuthContext)
+  const { Singnin}=useContext(AuthContext)
+ 
+
+
   const handlelogin=(e)=>{
     e.preventDefault()
     const email=e.target.email.value
@@ -19,7 +24,7 @@ const Login = () => {
     })
   }
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 flex justify-center gap-6 items-center align-middle ">
     <div className="hero-content flex-col ">
       <div className="text-center ">
         <h1 className="text-5xl text-cyan-700 font-bold">Login now!</h1>
@@ -45,9 +50,15 @@ const Login = () => {
           <div className="form-control mt-6">
             <button className="btn bg-cyan-950 font-bold text-white">Login</button>
           </div>
+          <p> New here ? <Link className='underline-offset-8  text-cyan-600 font-bold' to='/regi'>
+        Register 
+        
+        </Link></p>
         </form>
+       
       </div>
     </div>
+   
   </div>
   );
 };

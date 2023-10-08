@@ -5,20 +5,24 @@ export  const AuthContext=createContext(null)
 const auth=getAuth(app)
 const googleProvider=new GoogleAuthProvider()
 const AuthProvider = ({children}) => {
+  const  [loading,setloadin]=useState(true)
   const [ user,setuser]=useState(null)
 const createUser=(email,password)=>
 {
+  setloadin(true)
   return createUserWithEmailAndPassword( auth,email,password)
 }
 
 
 const googleSignin=()=>{
+  setloadin(true)
   return signInWithPopup(auth,googleProvider)
 }
 
 
 const logout=()=>
 {
+  setloadin(true)
   return signOut(auth)
 }
 useEffect(()=>{
@@ -29,6 +33,7 @@ useEffect(()=>{
 
     console.log('user auth',currentUser)
     setuser(currentUser)
+    setloadin(false)
 
   })
 return ()=>{
@@ -36,6 +41,7 @@ return ()=>{
 }
 },[])
 const Singnin=(email,password)=>{
+  setloadin(true)
   return signInWithEmailAndPassword(auth,email,password)
 }
 
@@ -46,7 +52,8 @@ const Singnin=(email,password)=>{
     logout,
      user,
      Singnin,
-     googleSignin
+     googleSignin,
+     loading
   }
   return (
     <AuthContext.Provider value={AuthInfo}>

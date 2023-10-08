@@ -8,6 +8,7 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Registration from "../Pages/Registration";
 import Details from "../Pages/Details";
+import Privaterout from "./Privaterout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/details/:id',
-        element:<Details></Details>,
+        element:<Privaterout><Details></Details></Privaterout>,
         loader:()=>fetch('/homejsoncard.json')
       },
       {

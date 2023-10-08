@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../COMPONENTS/Authfiles/AuthProvider';
-import { Link } from 'react-router-dom';
-import {FcGoogle } from "react-icons/fc";
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+// import {FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const { Singnin}=useContext(AuthContext)
+  const location=useLocation()
+  const navigate=useNavigate()
+  const [loginrerror, setlogrror] = useState('');
  
 
 
@@ -13,16 +16,27 @@ const Login = () => {
     const email=e.target.email.value
     const password=e.target.password.value
     console.log(email,password)
+    
     Singnin(email,password)
     .then(result=>{
-      console.log(result.user)
+      console.log(result.user);
+      navigate( location?.state? location.state :'/')
+
 
     })
     .catch(error=>{
       console.error(error)
+      setlogrror(error.message)
 
     })
   }
+
+
+
+
+
+
+
   return (
     <div className="hero min-h-screen bg-base-200 flex justify-center gap-6 items-center align-middle ">
     <div className="hero-content flex-col ">
@@ -55,6 +69,9 @@ const Login = () => {
         
         </Link></p>
         </form>
+        {
+          <p>{loginrerror}</p> 
+        }
        
       </div>
     </div>

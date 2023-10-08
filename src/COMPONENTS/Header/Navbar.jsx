@@ -32,8 +32,8 @@ const Navbar = () => {
        {link}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl  text-cyan-500"> 
-    <MdCastForEducation></MdCastForEducation>KnowledgeJunctionX</a>
+    <a  className="btn btn-ghost normal-case text-xl  text-cyan-500"> 
+    <MdCastForEducation  data-aos="flip-left"></MdCastForEducation>KnowledgeJunctionX</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

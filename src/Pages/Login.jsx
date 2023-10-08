@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../COMPONENTS/Authfiles/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import {FcGoogle } from "react-icons/fc";
-
+import Swal  from 'sweetalert2';
 const Login = () => {
   const { Singnin}=useContext(AuthContext)
   const location=useLocation()
@@ -27,6 +27,15 @@ const Login = () => {
     .catch(error=>{
       console.error(error)
       setlogrror(error.message)
+      Swal.fire({
+        title: 'Custom animation with Animate.css',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
 
     })
   }

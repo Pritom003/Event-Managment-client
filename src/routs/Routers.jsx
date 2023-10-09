@@ -11,10 +11,12 @@ import Details from "../Pages/Details";
 import Privaterout from "./Privaterout";
 import Youridea from "../Pages/Youridea";
 import Contact from "../Pages/Contact";
+import Errorpage from "../Pages/Errorpage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Roots></Roots>,
+    errorElement:<Errorpage></Errorpage>,
     children:[
       {
         path:'/',

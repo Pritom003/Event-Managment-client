@@ -5,7 +5,7 @@ const Headers = () => {
   return (
     <div className=" grid grid-cols-1 md:flex md:flex-row-reverse p-4 shadow-md  justify-center md:justify-between align-middle items-center ">
        <div className="grid justify-center align-middle items-center mb-6 ">
-      <img src="https://i.ibb.co/wsncTJQ/photo-of-mybg.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+      <img src="https://i.ibb.co/PgL8ghw/sssaave.png" className="max-w-sm rounded-lg shadow-2xl" />
       </div>
         <div className="  mb-3 text-cyan-500">
       <div className="flex gap-2  items-center">

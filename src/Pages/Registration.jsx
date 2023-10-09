@@ -116,16 +116,16 @@ const Registration = () => {
           
           </div>
         </div>
+       
         <div className="">
           <button
             onClick={handlegooglepop}
-            className="flex shadow-2xl items-center justify-center py-24 px-10 border-cyan-800 border-4 align-middle gap-2 text-xl font-bold"
+            className="flex shadow-2xl items-center justify-center py-12 md:py-24 px-2 md:px-10 border-cyan-800 border-4 align-middle md:gap-2 text-sm  md:text-xl font-bold"
           >
             Sign in with Google
             <FcGoogle className="text-6xl"></FcGoogle>
           </button>
         </div>
-        <div></div>
       </div>
     </div>
   );

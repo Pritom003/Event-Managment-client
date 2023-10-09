@@ -26,7 +26,8 @@ const Registration = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const name = e.target.name.value;
+    const namee = e.target.name.value;
+    const photo =e.target.photo.value
 
     if (!/^.{6,}$/.test(password)) {
       setpasserr('Password should be more than 6 characters');
@@ -40,7 +41,7 @@ const Registration = () => {
       createUser(email, password)
         .then((res) => {
           console.log(res.user);
-          // setsuccess('Registration successful!');
+          
           Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -81,7 +82,7 @@ const Registration = () => {
                 <label className="label">
                   <span className="label-text">Photo URL</span>
                 </label>
-                <input type="text" placeholder="photo" name="photo" className="input input-bordered" required />
+                <input type="photo" placeholder="photo" name="photo" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
@@ -112,10 +113,7 @@ const Registration = () => {
                 </Link>
               </p>
             </form>
-            {/* <div>
-              {registererror && <p className="text-red-600">{registererror}</p>}
-              {success && <p className="text-green-600">{success}</p>}
-            </div> */}
+          
           </div>
         </div>
         <div className="">

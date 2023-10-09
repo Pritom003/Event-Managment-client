@@ -28,15 +28,11 @@ const Login = () => {
       console.error(error)
       // setlogrror(error.message)
       Swal.fire({
-        title: 'Custom animation with Animate.css',
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
+        icon: 'error',
+       
+        text: 'email and password does not match please try again!',
+      
       })
-
     })
   }
 

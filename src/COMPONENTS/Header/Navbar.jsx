@@ -4,6 +4,7 @@ import {  MdCastForEducation } from "react-icons/md";
 import { AuthContext } from '../Authfiles/AuthProvider';
 const Navbar = () => {
   const {user ,logout}=useContext(AuthContext)
+  console.log(user)
   const handlesignout=()=>{
     logout()
     .then(res=>{
@@ -28,13 +29,14 @@ const Navbar = () => {
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24"
+         stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
        {link}
       </ul>
     </div>
-    <a  className="btn btn-ghost normal-case text-xl  text-cyan-500"> 
+    <a  className="btn btn-ghost normal-case text-sm  text-cyan-500"> 
     <MdCastForEducation  data-aos="flip-left"></MdCastForEducation>KnowledgeJunctionX</a>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -45,7 +47,10 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
    {
-    user ? <button onClick={handlesignout} className='text-xl font-bold mr-2 text-cyan-800'>signout</button>: <Link to='/login'><button
+    user ? <button onClick={handlesignout} className=' font-bold md:mr-2 text-cyan-800'><div className='flex justify-center align-middle items-center gap-2'>
+      <img className='h-[35px] rounded-full' src={user.photoURL} alt="" /> {user.displayName}
+       
+       </div></button>: <Link to='/login'><button
      className='text-xl  font-bold mr-2 text-cyan-800'>login</button></Link>
    }
   </div>

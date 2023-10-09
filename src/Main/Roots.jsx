@@ -5,7 +5,7 @@ import Navbar from '../COMPONENTS/Header/Navbar';
 
 const Roots = () => {
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className='max-w-5xl mx-auto'>
       <Navbar></Navbar>
   <Outlet></Outlet>
 

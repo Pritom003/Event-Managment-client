@@ -9,6 +9,8 @@ import Login from "../Pages/Login";
 import Registration from "../Pages/Registration";
 import Details from "../Pages/Details";
 import Privaterout from "./Privaterout";
+import Youridea from "../Pages/Youridea";
+import Contact from "../Pages/Contact";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,7 +34,15 @@ const router = createBrowserRouter([
       {
         path:'/regi',
         element:<Registration></Registration>
-      }
+      },
+      {
+        path:'/ideas',
+        element:<Privaterout><Youridea></Youridea></Privaterout>
+      },
+      {
+        path:'/contact',
+        element:<Privaterout><Contact></Contact></Privaterout>
+      },
     ]
   },
 ]);

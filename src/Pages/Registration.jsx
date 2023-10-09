@@ -50,7 +50,7 @@ const Registration = () => {
           });
         })
         .catch((err) => {
-          const error=err.message
+          
           console.error('error', err);
           Swal.fire({
             icon: 'error',

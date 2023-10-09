@@ -7,7 +7,7 @@ const Login = () => {
   const { Singnin}=useContext(AuthContext)
   const location=useLocation()
   const navigate=useNavigate()
-  const [loginrerror, setlogrror] = useState('');
+  // const [loginrerror, setlogrror] = useState('');
  
 
 
@@ -26,7 +26,7 @@ const Login = () => {
     })
     .catch(error=>{
       console.error(error)
-      setlogrror(error.message)
+      // setlogrror(error.message)
       Swal.fire({
         title: 'Custom animation with Animate.css',
         showClass: {
@@ -78,10 +78,7 @@ const Login = () => {
         
         </Link></p>
         </form>
-        {
-          <p>{loginrerror}</p> 
-        }
-       
+      
       </div>
     </div>
    

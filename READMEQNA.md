@@ -1,12 +1,13 @@
 # MCQ TEST
-1. B: ReferenceError: greetign is not defined
-   Because here the word mistake that are greeting to (greetign)
+1 . Answer: B: ReferenceError: greetign is not defined
+Explanation: In the code, there's a typographical error in the variable name. It should be greeting, but it's mistakenly written as greetign. As a result, a ReferenceError will occur because greetign is not defined.
 2. C: "12" 
-   Because 1 is integer and "2" is string.We know between a sting or a integer sum operation the add and get the result 12
+   Because 1 is integer and "2" is string.We know between a sting and a integer sum calculations result will not add them both but they will sit next to each other istead
 3. A: we define a array food.we create an object info with a property favoriteFood set the first element of    the food array index 0.we modify the value of info.favoriteFood.here console log doesn't directly modfy the food array.
 4. B: here sayHi is a function and have a parameter name.then return Hi there, ${name} .When console the code then just the output show HI there ,undefined.Because in the console log nothing to pass value.
-5. C: initialize the variable count.define an array nums=[0,1,2,3].use the forEach lopp to iterate over each  element of nums array.For 0, the condition if (num) is false, so count remains 0. 
-For 1, num is truthy, so count is incremented to 1.
-For 2, num is truthy, so count is incremented to 2.
-For 3, num is truthy, so count is incremented to 3
-Here answer was 3
+5. Answer: A: 1
+Explanation: The forEach loop iterates over each element in the nums array. It increments the count variable by 1 for each truthy value in the array. Since only the number 1 is truthy in this case, count is incremented once, resulting in 1.
+
+
+
+

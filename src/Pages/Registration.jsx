@@ -3,6 +3,7 @@ import { AuthContext } from '../COMPONENTS/Authfiles/AuthProvider';
 import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import Swal  from 'sweetalert2';
+import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
   const { createUser, googleSignin } = useContext(AuthContext);
@@ -41,6 +42,16 @@ const Registration = () => {
       createUser(email, password)
         .then((res) => {
           console.log(res.user);
+          updateProfile(res.user,{
+            displayName: `${namee}`,
+             photoURL:`${photo}`
+          })
+          .then(nameimg=>{
+            console.log('success image',nameimg)
+          })
+          .catch(err=>{
+            console.error(err,'error img')
+          })
           
           Swal.fire({
             position: 'top-end',

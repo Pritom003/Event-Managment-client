@@ -48,7 +48,8 @@ const Navbar = () => {
   <div className="navbar-end">
    {
     user ? <button onClick={handlesignout} className=' font-bold md:mr-2 text-cyan-800'><div className='flex justify-center align-middle items-center gap-2'>
-      <img className='h-[35px] rounded-full' src={user.photoURl} alt="" /> {user.displayName}
+       <img className='h-[20px] rounded-full' src={user.photoURL} alt="" />
+   {user.displayName}
        
        </div></button>: <Link to='/login'><button
      className='text-xl  font-bold mr-2 text-cyan-800'>login</button></Link>

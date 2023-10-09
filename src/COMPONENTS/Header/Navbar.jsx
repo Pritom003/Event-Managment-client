@@ -46,12 +46,19 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
+
    {
-    user ? <button onClick={handlesignout} className=' font-bold md:mr-2 text-cyan-800'><div className='flex justify-center align-middle items-center gap-2'>
-       <img className='h-[20px] rounded-full' src={user.photoURL} alt="" />
-   {user.displayName}
+    user ?   <div className='flex justify-center mr-2 align-middle items-center gap-2'>
+    <img className='h-[30px]  rounded-full' src={user.photoURL} alt="" />
+<p className='text-cyan-600'>{user.displayName}</p>  </div>:''
+   }
+    
+   {
+    user ? <button onClick={handlesignout} className=' font-bold md:mr-2 text-cyan-800'>
+      
+   <p>Logout</p>
        
-       </div></button>: <Link to='/login'><button
+      </button>: <Link to='/login'><button
      className='text-xl  font-bold mr-2 text-cyan-800'>login</button></Link>
    }
   </div>
